@@ -1,5 +1,6 @@
 # cropimage
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 [![PyPI version](https://badge.fury.io/py/cropimage.svg)](https://badge.fury.io/py/cropimage) 
 
 cropimage is a simple toolkit for image cropping. Different from other projects that mainly tackle face region, we extend to all kinds of images such as landscape. We support horizontal and portrait size and generate a square output.
