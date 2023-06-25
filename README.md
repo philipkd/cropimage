@@ -25,6 +25,9 @@ result = cropper.crop('./images/input.jpg')
 
 # Save the cropped image
 cv2.imwrite('cropped.jpg', result)
+
+# Just get the cropping region
+result = cropper.crop('./images/input.jpg',region_only=True)
 ~~~
 
 ## More Results

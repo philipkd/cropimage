@@ -148,7 +148,7 @@ class Cropper:
     '''
     Detect and Crop the region
     '''
-    def crop(self, image_dir, completeness=False, target_size=(500,500)):
+    def crop(self, image_dir, completeness=False, target_size=(500,500), region_only=False):
 
         # read image
         image = cv2.imread(image_dir)
@@ -207,7 +207,10 @@ class Cropper:
 
         left_y, right_y,left_x, right_x = int(left_y), int(right_y), int(left_x), int(right_x)
 
+        if region_only:
+            return (left_x,left_y,right_x,right_y)
+
         if target_size is not None:
             return cv2.resize(image[left_y:right_y, left_x:right_x, :], target_size)
         else:
-            return image[left_y:right_y, left_x:right_x, :]   
+            return image[left_y:right_y, left_x:right_x, :]
